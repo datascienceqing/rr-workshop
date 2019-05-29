@@ -8,6 +8,12 @@ output: html_document
 knitr::opts_chunk$set(echo =FALSE, fig.path = "figs/")
 
 ```
+```{bash, git_init, eval=False}
+git config --global user.name "Qing Zhou"
+git config --global user.email "qingzhou.cn@gmail.com"
+git config --global core.editor "vim"
+```
+
 
 
 *This is some formatting*

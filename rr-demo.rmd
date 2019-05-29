@@ -1,0 +1,45 @@
+---
+title: "My report"
+author: "Qing Zhou"
+date: "5/29/2019"
+output: html_document
+---
+```{r global_options, echo=FALSE}
+knitr::opts_chunk$set(echo =FALSE, fig.path = "figs/")
+
+```
+
+
+*This is some formatting*
+**Some other formatting**
+
+[A hyperlink](https://google.com)
+
+- A bulleted list
+- Another list item
+
+1. A numbered list
+    1. A second numbered list
+
+
+```{r load_data, message=FALSE}
+
+library("gapminder")
+library("ggplot2")
+suppressMessages((library("tidyverse")))
+data(gapminder)
+head(gapminder)
+```
+```{r gdp_lifeexp_plot, fig.width=3}
+ggplot(data= gapminder, mapping=aes(x=gdpPercap, y=lifeExp)) + geom_point()
+
+```
+```{r iceland, echo=FALSE}
+iceland <- filter(gapminder, country == "Iceland")
+max_iceland_lifeexp<- max(iceland$lifeExp)
+
+```
+
+
+The largest population of any country in the Iceland is `r max_iceland_lifeexp`.
+

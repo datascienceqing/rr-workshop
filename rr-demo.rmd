@@ -2,16 +2,19 @@
 title: "My report"
 author: "Qing Zhou"
 date: "5/29/2019"
-output: html_document
+output: 
+   html_document:
+     keep_md: true
 ---
 ```{r global_options, echo=FALSE}
 knitr::opts_chunk$set(echo =FALSE, fig.path = "figs/")
 
 ```
-```{bash, git_init, eval=False}
-git config --global user.name "Qing Zhou"
-git config --global user.email "qingzhou.cn@gmail.com"
-git config --global core.editor "vim"
+```
+#git config --global user.name "Qing Zhou"
+#git config --global user.email "qingzhou.cn@gmail.com"
+#git config --global core.editor "vim"
+#git init
 ```
 
 
